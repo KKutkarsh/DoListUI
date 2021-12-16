@@ -1,0 +1,15 @@
+Code has been developed and tested using 
+   "@angular/common": "~13.0.0",
+    "@angular/compiler": "~13.0.0",
+    "@angular/core": "~13.0.0",
+    "@angular/forms": "~13.0.0",
+    "@angular/platform-browser": "~13.0.0",
+    "@angular/platform-browser-dynamic": "~13.0.0",
+
+and Node : v16.13.0 on windows 10 Enterprise with VSCode editor
+
+To run the code 
+1. install node v16.13.0 using MSI installer
+2. Install angular
+
+go to the project folder and use command ng serve to run 
