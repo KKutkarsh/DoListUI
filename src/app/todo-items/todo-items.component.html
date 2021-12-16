@@ -1,0 +1,39 @@
+
+<div class="py-3" style="border-bottom: 1px solid rgb(202, 202, 169);">
+    <h3 class="display-4 text-center">ToDoList</h3>
+    <ul class="display-4 text-center" style="background-color: bisque;">
+        <li>Form on the left is common for add and update</li>
+        <li>Click on the row of data to edit it</li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-4" style="border-right: 1px solid rgb(231, 186, 186);">
+        <app-todo-item-form></app-todo-item-form>
+    </div>
+    <div class="col-md-8">
+        <table class="table sortable ">
+           
+            <thead class="table-light">
+                <tr>
+                    <th>Item Status</th>
+                    <th>Item Name</th>
+                    <th>Item Description</th>
+                    <th>LastUpdated</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td (click)="populateForm(pd)">{{ pd.isActive }}</td>
+                    <td (click)="populateForm(pd)">{{ pd.itemName }}</td>
+                    <td (click)="populateForm(pd)">{{ pd.itemDescription }}</td>
+                    <td (click)="populateForm(pd)">{{ pd.lastUpdated }}</td>
+                    <td>
+                        <i class="fa fa-trash-o fa-lg text-danger" (click)="onDelete(pd.itemId)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
